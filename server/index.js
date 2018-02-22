@@ -1,13 +1,27 @@
 // import {usuario} from "../src/app/chat.service";
 
-let express = require('express');
-let app = express();
-const publicPath = path.join(__dirname, './public');
-let http = require('http');
-let server = http.Server(app);
+const path = require('path');
+const http = require('http');
+const express = require('express');
+const socketIO = require('socket.io');
 
-let socketIO = require('socket.io');
-let io = socketIO(server);
+
+const publicPath = path.join(__dirname, './public');
+const port = process.env.PORT || 3000;
+var app = express();
+var server = http.createServer(app);
+var io = socketIO(server);
+
+app.use(express.static(publicPath));
+
+// let express = require('express');
+// let app = express();
+// const publicPath = path.join(__dirname, './public');
+// let http = require('http');
+// let server = http.Server(app);
+//
+// let socketIO = require('socket.io');
+// let io = socketIO(server);
 
 var abecedario = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
   'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
