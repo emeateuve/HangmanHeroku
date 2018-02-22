@@ -49,14 +49,11 @@ var letrasDichas = [];
 var usuariosPartida = [];
 var valorTurno = 0;
 
-const port = process.env.PORT || 3000;
-
 var arrayUsuarios = [];
 var usuariosChat = [];
 var usuariosWaiting = [];
 var usuariosListos = [];
 var numeroListos = 0;
-
 
 io.on('connection', (socket) => {
 
