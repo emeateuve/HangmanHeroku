@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="col-lg-8 col-md-8 col-sm-8 col-8 align-middle formulario">
+    <h1>HangMan wordguesser</h1>
+    <div class="col-lg-10 col-md-10 col-sm-10 col-10 centro">
+      <form>
+        <div class="form-group">
+          <label>Nombre de usuario: </label>
+          <input type="text" name="nombreUsuario" [(ngModel)]="inputUsuario" class="form-control" placeholder="Usuario...">
+        </div>
+        <button *ngIf="inputUsuario" type="button" class="btn btn-primary" (click)="enviarUsuario()" [routerLink]="['lobby']"><a>Log in</a></button>
+      </form>
+    </div>
+    <p>Recuerda que tu nombre de usuario debe ser único</p>
+  </div>
+  <div class="imagenes">
+    <img src="../../assets/hombre.svg" (click)="imagenSeleccionada(1)" [ngClass]="{'seleccionado': avatar==1}">
+    <img src="../../assets/mujer.svg" (click)="imagenSeleccionada(2)" [ngClass]="{'seleccionado': avatar==2}">
+  </div>
+</div>

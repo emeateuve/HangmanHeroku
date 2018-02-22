@@ -1,0 +1,65 @@
+<div class="container">
+  <div *ngIf="usuario" class="col-lg-6 col-md-6 col-sm-6 col-6 menu">
+    <div id="accordion">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false"
+                    aria-controls="collapseOne">
+              Buscar partida
+            </button>
+          </h5>
+        </div>
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+          <div class="card-body">
+            <label for="validationServer01">Sala</label>
+            <input type="text" name="numeroSala" [(ngModel)]="numeroSala" class="form-control" id="validationServer01" placeholder="Número de sala..." value="0" required>
+            <button *ngIf="numeroSala" class="btn btn-primary buscar" type="submit" [routerLink]="['/waiting']" (click)="enviameAlJuego(jsonLobby)">Buscar partida</button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+            <button class="btn btn-link" routerLink="/">
+              Cambiar nombre de usuario
+            </button>
+          </h5>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h5 class="mb-0">
+            <button class="btn btn-link" routerLink="/chatglobal" (click)="enviameAlChat(jsonLobby)">
+              Chat global
+            </button>
+          </h5>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingFour">
+          <h5 class="mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
+                    aria-controls="collapseFour">
+              Cambiar imagen de usuario
+            </button>
+          </h5>
+        </div>
+        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+          <div class="card-body">
+           jeje
+          </div>
+        </div>
+      </div>
+    </div>
+    <h3 style="text-align: center">{{usuario}}</h3>
+    <button (click)="darUsuario()">DAME EL USUARIO</button>
+  </div>
+  <div *ngIf="!usuario">
+    <h1>No tienes usuario compare, ponte uno</h1>
+    <button routerLink="/">Volver al inicio</button>
+  </div>
+
+  <img src="{{jsonLobby.avatar}}">
+
+</div>

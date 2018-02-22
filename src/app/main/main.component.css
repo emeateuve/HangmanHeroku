@@ -1,0 +1,25 @@
+.formulario {
+  border-radius: 3px;
+  border: 1px solid white;
+  margin: auto;
+  text-align: center;
+  height: 50vh;
+  background-color: white;
+}
+
+.centro{
+  display: inline-block;
+}
+
+.centro button a{
+  color: #fff;
+}
+
+.centro button{
+  background-color: #193740;
+}
+
+
+.seleccionado{
+  border: yellow 2px solid;
+}

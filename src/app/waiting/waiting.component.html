@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="col-6 usuarios">
+    <h1>Usuarios:</h1><hr>
+    <ul>
+      <li *ngFor="let usuario of usuariosConectados">
+        {{usuario}}
+      </li>
+    </ul>
+  </div>
+  <div class="col-6 mensajes">
+    <h1>Mensajes: </h1><hr>
+    <ul>
+      <li *ngFor="let conexion of messages">
+        {{conexion}}
+      </li>
+    </ul>
+  </div>
+  <button (click)="estoyListo(jsonJugador)">LISTO</button>
+  <h2 style="color: #fff;">Esperando a que los jugadores entren...</h2>
+  <button *ngIf="partidaLista" routerLink="/partida">Empezar partida</button>
+
+</div>

@@ -1,0 +1,40 @@
+.menu {
+  margin: auto;
+  min-height: 80vh;
+  background-color: white;
+  margin-top: 10vh;
+}
+
+.card-header {
+  background: rgba(71, 108, 124, 0.8);
+}
+
+#accordion .card {
+  border-style: none;
+  border-radius: 3px;
+}
+
+.card-header button {
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+}
+
+.card-header h5 {
+  text-align: center;
+  margin: auto;
+}
+
+#accordion {
+  margin-top: 15vh;
+  height: inherit;
+  width: inherit;
+  display: inline-block;
+}
+
+.buscar {
+  background-color: #193740;
+  margin: auto;
+  width: 100%;
+}

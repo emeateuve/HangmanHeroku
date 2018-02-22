@@ -1,0 +1,61 @@
+.todo{
+  margin-left:auto;
+  height:100vh;
+}
+
+.chat{
+  padding:0;
+  border-radius: 5px;
+  background-color: white;
+  height:90vh;
+  width:100%;
+  border: 1px solid #6C757D;
+}
+
+.chat ul li{
+  list-style: none;
+}
+
+.chat ul li:nth-last-child(1){
+  background: rgba(0,0,0,0.2);
+  color: #fff;
+}
+
+.usuarios ul li{
+  list-style: none;
+  width: 100%;
+  display: inline-block;
+  background: rgba(150,0,0,0.2);
+  color: #000;
+  float: left;
+}
+
+.usuarios{
+  padding:0;
+  background: rgba(255,255,255,0.9);
+  width:100%;
+  height:90vh;
+  border-radius: 5px;
+  border: 1px solid #6C757D;
+}
+
+.escribir{
+  padding:0;
+  width: 100%;
+  height: 9vh;
+}
+
+.escribir input{
+  width: 90%;
+  float: left;
+  height:inherit !important;
+}
+
+.escribir button{
+  background-color: #476C7C;
+  color: #fff;
+}
+
+.escribir button:hover{
+  background-color: #001B28;
+}

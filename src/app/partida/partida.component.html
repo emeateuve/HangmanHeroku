@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <div *ngIf="partida" class="row">
+    <!--<button  type="button" (click)="cambiaTurno(usuariosPartida)">Cambiar turno.</button>-->
+<div>
+  <button *ngFor="let item of abecedario" type="button" (click)="adivinaLetra(item)">{{item}}</button>
+</div>
+
+
+  <h1>Frase:</h1>
+  <span *ngFor="let cosica of enviada">
+    <span *ngIf="!cosica.estado">_ </span>
+    <span *ngIf="cosica.estado">{{cosica.letra}} </span>
+  </span>
+    <h1>Nombre de usuario: {{usuario.usuario}}</h1>
+  <h2>Pista: {{nuevaPista}}</h2>
+  <!--<h1>El turno es de: {{// usuariosPartida[valorTurno].usuario}} ^^ {{usuariosPartida[valorTurno].turno}}</h1>-->
+
+
+  </div>
+</div>

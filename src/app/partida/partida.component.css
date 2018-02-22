@@ -1,0 +1,26 @@
+.abecedario button:active{
+  background-color: transparent;
+  color: #fff;
+}
+
+.abecedario ul li{
+  text-decoration: none;
+  display: inline;
+  text-align: center;
+  font-size: 20px;
+}
+
+.abecedario ul{
+  display: inline-block;
+  text-align: center;
+  width:100%;
+}
+
+.puntuacion{
+  color: #fff;
+}
+
+.abecedario button{
+  min-height: 30px;
+  min-width:50px;
+}
