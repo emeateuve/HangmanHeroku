@@ -4,11 +4,15 @@ const path = require('path');
 const http = require('http');
 const express = require('express');
 const socketIO = require('socket.io');
-
-
-const publicPath = path.join(__dirname, './public');
-const port = process.env.PORT || 3000;
 var app = express();
+app.use(express.static(path.join(__dirname, 'public')));
+app.get('*', function (req, res) {
+  res.sendfile(path.join(__dirname, 'public', 'index.html'));
+});
+
+//const publicPath = path.join(__dirname, './public');
+const port = process.env.PORT || 3000;
+
 var server = http.createServer(app);
 var io = socketIO(server);
 
