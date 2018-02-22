@@ -10,7 +10,7 @@ app.get('*', function (req, res) {
   res.sendfile(path.join(__dirname, 'public', 'index.html'));
 });
 
-//const publicPath = path.join(__dirname, './public');
+const publicPath = path.join(__dirname, './public');
 const port = process.env.PORT || 3000;
 
 var server = http.createServer(app);
